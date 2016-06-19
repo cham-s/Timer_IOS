@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func stop(sender: AnyObject) {
-        position += 1
         timer.invalidate()
         startButton.enabled = true
         stopButton.enabled = false
     }
     
     @IBAction func addTime(sender: AnyObject) {
+        position += 1
         let timeResult = TimeResult(time: "\(counter)", position: position)
         insertNewRowWithTimeResult(timeResult)
     }
